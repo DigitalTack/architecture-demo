@@ -1,0 +1,30 @@
+{
+  "name": "demo-api",
+  "version": "0.0.1",
+  "description": "An architecture demo",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "conc \"npx tsc --watch\" \"nodemon --inspect=0.0.0.0 -q dist/index.js\"",
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@payloadcms/bundler-vite": "^0.1.5",
+    "@payloadcms/db-mongodb": "^1.1.0",
+    "@payloadcms/richtext-lexical": "^0.4.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "payload": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.4",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.2"
+  }
+}
