@@ -6,6 +6,10 @@ require('dotenv').config()
 
 const app = express()
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 const start = async () => {
   await payload.init({
     secret: process.env.PAYLOAD_SECRET!,
@@ -15,7 +19,7 @@ const start = async () => {
 
   app.listen(5000, async () => {
     console.log(
-      "Express is now listening for incoming connections on port 3000."
+      "Express is now listening for incoming connections on port 5000."
     )
   })
 }
