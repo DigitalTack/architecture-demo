@@ -9,3 +9,16 @@ services:
       - /app/node_modules/
     ports:
       - 3000:3000
+
+  e2e:
+    build: 
+      context: ./e2e
+    volumes:
+      - ./e2e:/e2e
+      - /e2e/node_modules
+    ports:
+      - 9323:9323
+    depends_on:
+      - app
+    network_mode: host
+    container_name: e2e_demo
