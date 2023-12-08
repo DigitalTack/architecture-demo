@@ -11,7 +11,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint src --ext .ts,.vue && prettier --check . --ignore-path .gitignore",
-    "lin-fix": "eslint --fix . && prettier --write src/",
+    "lint-fix": "eslint --fix . && prettier --write src/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

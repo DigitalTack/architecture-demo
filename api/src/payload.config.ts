@@ -9,14 +9,14 @@ const { DATABASE_URI } = process.env
 const url = `${DATABASE_URI}`
 
 export default buildConfig({
-    admin: {
-        user: Users.slug,   
-        bundler: viteBundler({}),
-    },
-    collections: [Users],
-    cors: '*',
-    db: mongooseAdapter({
-        url,
-    }),
-    editor: lexicalEditor({})
+  admin: {
+    user: Users.slug,
+    bundler: viteBundler({})
+  },
+  collections: [Users],
+  cors: '*',
+  db: mongooseAdapter({
+    url
+  }),
+  editor: lexicalEditor({})
 })
