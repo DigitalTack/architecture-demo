@@ -55,6 +55,7 @@ services:
       - /e2e/node_modules
     ports:
       - 9323:9323
+      - 6006:6006
     depends_on:
       - app
     network_mode: host

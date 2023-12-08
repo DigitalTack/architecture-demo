@@ -1,13 +1,18 @@
-// Replace your-framework with the framework you are using (e.g., react-vite, vue3-vite)
-import type { StorybookConfig } from '@storybook/your-framework';
+import type { StorybookConfig } from '@storybook/vue3-vite'
 
 const config: StorybookConfig = {
-  framework: '@storybook/your-framework',
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  async viteFinal(config, options) {
-    // Add your configuration here
-    return config;
-  },
-};
-
-export default config;
+	stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+	addons: [
+		'@storybook/addon-links',
+		'@storybook/addon-essentials',
+		'@storybook/addon-interactions'
+	],
+	framework: {
+		name: '@storybook/vue3-vite',
+		options: {}
+	},
+	docs: {
+		autodocs: 'tag'
+	}
+}
+export default config
