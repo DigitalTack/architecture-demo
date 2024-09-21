@@ -3,9 +3,10 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { viteBundler } from '@payloadcms/bundler-vite'
 
-import Users from './payload/collections/Users'
+import Carts from './payload/collections/Carts'
 import Media from './payload/collections/Media'
 import Products from './payload/collections/Products'
+import Users from './payload/collections/Users'
 
 const { DATABASE_URI } = process.env
 const url = `${DATABASE_URI}`
@@ -15,7 +16,7 @@ export default buildConfig({
     user: Users.slug,
     bundler: viteBundler({})
   },
-  collections: [Users, Media, Products],
+  collections: [Carts, Media, Products, Users],
   cors: '*',
   db: mongooseAdapter({
     url

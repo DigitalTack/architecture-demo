@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   app:
     build: 
@@ -29,13 +27,6 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGODB_USER}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGODB_PASSWORD}
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodb-config:/data/configdb
-      - mongodb-data:/data/db
-      - mongodb-dumps:/data/dumps
-      - mongodb-backups:/data/backups
 
   mongo-express:
     image: mongo-express:latest
@@ -63,13 +54,3 @@ services:
     network_mode: host
     container_name: e2e_demo
     profiles: ['test']
-
-volumes:
-  mongodb-config:
-    external: false
-  mongodb-data:
-    external: false
-  mongodb-dumps:
-    external: false
-  mongodb-backups:
-    external: false
