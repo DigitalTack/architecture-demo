@@ -6,7 +6,7 @@
   </header>
 
   <main>
-    <p>hola</p>
+    <RouterView />
   </main>
 </template>
 
