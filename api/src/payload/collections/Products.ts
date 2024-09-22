@@ -18,7 +18,10 @@ const Products: CollectionConfig = {
       required: true,
       relationTo: 'media'
     }
-  ]
+  ],
+  access: {
+    read: () => true
+  },
 }
 
 export default Products

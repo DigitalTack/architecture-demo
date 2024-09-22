@@ -1,13 +1,5 @@
 <template>
-  <header>
-    <div>
-      <p>title</p>
-    </div>
-  </header>
-
-  <main>
-    <RouterView />
-  </main>
+  <RouterView />
 </template>
 
 <script setup lang="ts">

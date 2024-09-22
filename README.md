@@ -42,3 +42,9 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 ```sh
 # Install browsers for the first run
 docker compose run --rm e2e npm run test
+```
+
+## Storybook
+```sh
+docker compose exec app npm run storybook
+```

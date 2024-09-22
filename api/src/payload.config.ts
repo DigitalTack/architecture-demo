@@ -17,7 +17,9 @@ export default buildConfig({
     bundler: viteBundler({})
   },
   collections: [Carts, Media, Products, Users],
-  cors: '*',
+  cors: [
+    'http://localhost:3000'
+  ],
   db: mongooseAdapter({
     url
   }),
