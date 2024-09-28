@@ -1,6 +1,6 @@
-import type { Image } from "@/domain/entities/Image"
+import type { Image } from '@/domain/entities/Image'
 
 export type Product = {
-    name: string
-    image: Image
+	name: string
+	image: Image
 }

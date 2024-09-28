@@ -2,11 +2,11 @@
 @import './variables.css';
 
 #app {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 body {
-  background-color: var(--light-shades-color);
-  color: var(--dark-font);
-  font-weight: normal;
+	background-color: var(--light-shades-color);
+	color: var(--dark-font);
+	font-weight: normal;
 }

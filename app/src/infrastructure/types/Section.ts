@@ -1,11 +1,11 @@
 enum SectionMode {
-  dark = 'dark',
-  light = 'light',
+	dark = 'dark',
+	light = 'light'
 }
 
 export interface SectionProps {
-  id: string,
-  mode: SectionMode,
+	id: string
+	mode: SectionMode
 }
 
-export {SectionMode}
+export { SectionMode }

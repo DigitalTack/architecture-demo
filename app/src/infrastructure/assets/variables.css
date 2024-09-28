@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #15A919;
-    --light-accent-color: #82A088;
-    --light-shades-color: #ECE9E5;
-    --dark-accent-color: #655C52;
-    --dark-shades-color: #1E2720;
-    --dark-font: rgb(30, 39, 32);
-    --light-font: rgb(236, 233, 229);
+	--primary-color: #15a919;
+	--light-accent-color: #82a088;
+	--light-shades-color: #ece9e5;
+	--dark-accent-color: #655c52;
+	--dark-shades-color: #1e2720;
+	--dark-font: rgb(30, 39, 32);
+	--light-font: rgb(236, 233, 229);
 
-    --desktop: 1024px;
+	--desktop: 1024px;
 }

@@ -11,12 +11,11 @@ import ProductApiRepository from './infrastructure/repositories/ProductApiReposi
 const bus = Bus.create()
 
 bus.subscribe('products:load', async () => {
-    const repository = new ProductApiRepository()
-    const action = new LoadProductsAction(repository)
-    const products = await action.execute()
+	const repository = new ProductApiRepository()
+	const action = new LoadProductsAction(repository)
+	const products = await action.execute()
 
-    bus.publish('products:loaded', products)
-
+	bus.publish('products:loaded', products)
 })
 
 const app = createApp(App)

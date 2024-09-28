@@ -1,11 +1,11 @@
 enum LogoSize {
-    small = 'small',
-    medium = 'medium',
-    large = 'large'
+	small = 'small',
+	medium = 'medium',
+	large = 'large'
 }
 
 export interface LogoProps {
-    size?: LogoSize
+	size?: LogoSize
 }
 
 export { LogoSize }

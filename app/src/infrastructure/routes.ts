@@ -1,17 +1,17 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 
-import ProductListPage from '@/infrastructure/pages/ProductListPage.vue'
+import ProductListView from '@/infrastructure/views/ProductListView.vue'
 
 const routes = [
-    {
-        path: '/',
-        component: ProductListPage
-    },
+	{
+		path: '/',
+		component: ProductListView
+	}
 ]
 
 const router = createRouter({
-    history: createMemoryHistory(),
-    routes,
+	history: createMemoryHistory(),
+	routes
 })
 
 export { router }
