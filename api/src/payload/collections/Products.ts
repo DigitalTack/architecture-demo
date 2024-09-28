@@ -13,6 +13,11 @@ const Products: CollectionConfig = {
       required: true,
     },
     {
+      name: 'price',
+      type: 'number',
+      required: true,
+    },
+    {
       name: 'image',
       type: 'upload',
       required: true,

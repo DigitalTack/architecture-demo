@@ -41,6 +41,7 @@
 						class="product__card"
 						:name="product.name"
 						:image="product.image"
+						:price="product.price"
 					/>
 				</div>
 			</Section>

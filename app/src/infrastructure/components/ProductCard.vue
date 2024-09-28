@@ -13,5 +13,6 @@
 			:size="ImageSize.medium"
 		/>
 		<h3>{{ name }}</h3>
+		<p>{{ price }} €</p>
 	</div>
 </template>

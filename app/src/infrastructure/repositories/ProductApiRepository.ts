@@ -66,7 +66,8 @@ export default class ProductApiRepository extends BaseApiRepository implements P
 			}
 			const product: Product = {
 				name: item.name,
-				image: image
+				image: image,
+				price: item.price
 			}
 			products.push(product)
 		}
