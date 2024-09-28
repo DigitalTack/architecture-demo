@@ -3,6 +3,7 @@
 # Backend
 api/node_modules/
 api/dist/
+api/src/media/
 
 # Frontend
 app/node_modules
