@@ -3,12 +3,12 @@
 	import type { Image } from '@/domain/entities/Image'
 	import { ImageSize } from '@/domain/entities/Image'
 
-	const props = withDefaults(defineProps<Image>(), {
+	const props = withDefaults(defineProps<{ image: Image, size: ImageSize }>(), {
 		size: ImageSize.small
 	})
 
 	const src = computed(() => {
-		return `${import.meta.env.VITE_BASE_URL}${props.src}`
+		return `${import.meta.env.VITE_BASE_URL}${props.image.sizes[props.size]}`
 	})
 
 	const sizeMod = computed(() => {
@@ -21,7 +21,7 @@
 		class="image"
 		:class="sizeMod"
 		:src="src"
-		:alt="alt"
+		:alt="image.alt"
 	/>
 </template>
 

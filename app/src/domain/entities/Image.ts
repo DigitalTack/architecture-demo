@@ -6,9 +6,8 @@ enum ImageSize {
 }
 
 export type Image = {
-	src: string
 	alt: string
-	size?: ImageSize
+	sizes: Record<ImageSize, string>
 }
 
 export { ImageSize }

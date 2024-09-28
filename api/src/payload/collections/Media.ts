@@ -7,9 +7,21 @@ const Media: CollectionConfig = {
     staticDir: 'media',
     imageSizes: [
       {
-        name: 'thumbnail',
+        name: 'small',
+        width: 200,
+        height: 200,
+        position: 'centre',
+      },
+      {
+        name: 'medium',
         width: 400,
         height: 300,
+        position: 'centre',
+      },
+      {
+        name: 'large',
+        width: 800,
+        height: 800,
         position: 'centre',
       },
       {
@@ -19,7 +31,8 @@ const Media: CollectionConfig = {
         position: 'centre',
       }
     ],
-    adminThumbnail: 'thumbnail',
+
+    adminThumbnail: 'medium',
     mimeTypes: ['image/*'],
   },
   fields: [

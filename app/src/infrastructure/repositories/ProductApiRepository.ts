@@ -1,5 +1,6 @@
 import type { Product } from '@/domain/entities/Product'
 import type { Image } from '@/domain/entities/Image'
+import { ImageSize } from '@/domain/entities/Image'
 import type ProductRepository from '@/domain/repositories/ProductRepository'
 import BaseApiRepository from './BaseApiRepository'
 
@@ -53,9 +54,15 @@ export default class ProductApiRepository extends BaseApiRepository implements P
 	mapProducts(data: Record<string, any>[]): Array<Product> {
 		const products = []
 		for (const item of data['docs']) {
+			const sizes: Record<ImageSize, string> = {
+				[ImageSize.small]: item.image.sizes[ImageSize.small].url,
+				[ImageSize.medium]: item.image.sizes[ImageSize.medium].url,
+				[ImageSize.large]: item.image.sizes[ImageSize.large].url,
+				[ImageSize.full]: item.image.sizes[ImageSize.full].url,
+			}
 			const image: Image = {
-				src: item.image.url,
-				alt: item.image.alt
+				alt: item.image.alt,
+				sizes: sizes
 			}
 			const product: Product = {
 				name: item.name,

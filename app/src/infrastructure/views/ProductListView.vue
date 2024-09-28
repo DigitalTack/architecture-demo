@@ -51,5 +51,6 @@
 <style scoped>
 	.product {
 		display: flex;
+		gap: 1rem;
 	}
 </style>

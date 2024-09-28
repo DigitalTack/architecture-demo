@@ -23,5 +23,5 @@ export default buildConfig({
   db: mongooseAdapter({
     url
   }),
-  editor: lexicalEditor({})
+  editor: lexicalEditor({}),
 })

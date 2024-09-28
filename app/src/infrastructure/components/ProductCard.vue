@@ -9,12 +9,9 @@
 <template>
 	<div class="product-card">
 		<Image
-			:src="image.src"
-			:alt="image.alt"
+			:image="image"
 			:size="ImageSize.medium"
 		/>
 		<h3>{{ name }}</h3>
 	</div>
 </template>
-
-<style scoped></style>
