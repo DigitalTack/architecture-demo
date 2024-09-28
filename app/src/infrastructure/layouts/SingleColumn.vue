@@ -1,22 +1,14 @@
 <script setup lang="ts">
   import Header from '@/infrastructure/components/visual/Header.vue'
+  import Section from '@/infrastructure/components/visual/Section.vue'
+  import { SectionMode } from '@/infrastructure/types/Section';
 </script>
 
 <template>
-    <section class="header">
+    <Section id="header" :mode="SectionMode.light">
         <Header />
-    </section>
+    </Section>
     <main>
-        <section class="content">
-            <slot name="content"/>
-        </section>
+        <slot name="content"/>
     </main>
 </template>
-
-<style scoped>
-    .header,
-    main {
-        max-width: var(--desktop);
-    }
-
-</style>

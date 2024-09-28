@@ -1,8 +1,11 @@
 <script lang="ts" setup>
   import ProductCard from '@/infrastructure/components/visual/ProductCard.vue';
+  import MainTitle from '@/infrastructure/components/visual/MainTitle.vue';
+  import Section from '@/infrastructure/components/visual/Section.vue';
+  import { SectionMode } from '@/infrastructure/types/Section';
   import SingleColumn from '@/infrastructure/layouts/SingleColumn.vue';
   import type { Product } from '@/domain/entities/Product';
-  import { computed, onMounted, ref } from 'vue';
+  import { onMounted, ref } from 'vue';
   import Bus from '../bus';
 
   const bus = Bus.create()
@@ -21,7 +24,10 @@
 <template>
     <SingleColumn>
         <template v-slot:content>
-            <h2>Products</h2>
+            <Section id="title" :mode="SectionMode.dark">
+              <MainTitle>Products</MainTitle>
+            </Section>
+            <Section id="content" :mode="SectionMode.light">
               <div class="product">
                 <ProductCard 
                   v-for="(product, index ) in products"
@@ -31,6 +37,7 @@
                   :image="product.image"
                 />
               </div>
+            </Section>
         </template>
     </SingleColumn>
 </template>
