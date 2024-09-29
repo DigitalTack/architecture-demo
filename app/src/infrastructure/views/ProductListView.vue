@@ -4,7 +4,7 @@
 	import Section from '@/infrastructure/components/Section.vue'
 	import { SectionMode } from '@/infrastructure/types/Section'
 	import SingleColumn from '@/infrastructure/layouts/SingleColumn.vue'
-	import type { Product } from '@/domain/entities/Product'
+	import type { Product, ProductId } from '@/domain/entities/Product'
 	import { onMounted, ref } from 'vue'
 	import Bus from '@/infrastructure/bus'
 
@@ -13,12 +13,16 @@
 	const products = ref<Array<Product>>([])
 
 	onMounted(() => {
-		bus.publish('products:load')
-
 		bus.subscribe('products:loaded', (payload: Array<Product>) => {
 			Object.assign(products.value, payload)
 		})
+
+		bus.publish('products:load')
 	})
+
+	function addToCart(product: ProductId) {
+		bus.publish('cart:add', product)
+	}
 </script>
 
 <template>
@@ -39,9 +43,8 @@
 						v-for="(product, index) in products"
 						:key="index"
 						class="product__card"
-						:name="product.name"
-						:image="product.image"
-						:price="product.price"
+						:product="product"
+						@cart:add="addToCart"
 					/>
 				</div>
 			</Section>

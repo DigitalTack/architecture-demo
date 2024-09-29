@@ -65,6 +65,7 @@ export default class ProductApiRepository extends BaseApiRepository implements P
 				sizes: sizes
 			}
 			const product: Product = {
+				id: item.id,
 				name: item.name,
 				image: image,
 				price: item.price

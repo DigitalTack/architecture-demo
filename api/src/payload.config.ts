@@ -3,7 +3,6 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { viteBundler } from '@payloadcms/bundler-vite'
 
-import Carts from './payload/collections/Carts'
 import Media from './payload/collections/Media'
 import Products from './payload/collections/Products'
 import Users from './payload/collections/Users'
@@ -16,7 +15,7 @@ export default buildConfig({
     user: Users.slug,
     bundler: viteBundler({})
   },
-  collections: [Carts, Media, Products, Users],
+  collections: [Media, Products, Users],
   cors: [
     'http://localhost:3000'
   ],
