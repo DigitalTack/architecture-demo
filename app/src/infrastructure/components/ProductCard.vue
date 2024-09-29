@@ -1,8 +1,10 @@
 <script setup lang="ts">
-	import Image from '@/infrastructure/components/Image.vue'
 	import Button from '@/infrastructure/components/Button.vue'
+	import CardTitle from '@/infrastructure/components/CardTitle.vue'
 	import Icon from '@/infrastructure/components/Icon.vue'
+	import Image from '@/infrastructure/components/Image.vue'
 	import { ImageSize } from '@/domain/entities/Image'
+	import { ButtonColor } from '@/infrastructure/types/Button'
 	import type { Product } from '@/domain/entities/Product'
 
 	defineProps<{product: Product}>()
@@ -16,8 +18,17 @@
 			:image="product.image"
 			:size="ImageSize.medium"
 		/>
-		<h3>{{ product.name }}</h3>
-		<p>{{ product.price }} €</p>
-		<Button @click="emit('cart:add', product.id)"><Icon name="cart-plus"></Icon>Add to cart</Button>
+		<div class="product-card__info">
+			<CardTitle class="product-card__info__item">{{ product.name }}</CardTitle>
+			<p class="product-card__info__item">{{ product.price }} €</p>
+		</div>
+		<Button :color="ButtonColor.primary" @click="emit('cart:add', product.id)"><Icon name="cart-plus"></Icon>Add to cart</Button>
 	</div>
 </template>
+
+<style scoped>
+.product-card__info {
+	display: flex;
+	justify-content: space-between;
+}
+</style>

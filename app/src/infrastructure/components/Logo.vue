@@ -6,6 +6,7 @@
 	const props = withDefaults(defineProps<LogoProps>(), {
 		size: LogoSize.small
 	})
+
 	const sizeMod = computed(() => {
 		return 'logo--size-' + props.size
 	})

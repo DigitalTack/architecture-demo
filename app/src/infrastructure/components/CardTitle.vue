@@ -1,12 +1,13 @@
 <template>
-	<h1 class="main-title">
+	<h3 class="card-title">
 		<slot />
-	</h1>
+	</h3>
 </template>
 
 <style scoped>
-.main-title {
-	font-size: 48px;
+.card-title {
+	font-size: 20px;
 	font-weight: bold;
 }
 </style>
+
