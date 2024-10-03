@@ -1,5 +1,8 @@
 @import './base.css';
 @import './variables.css';
+@import './fontawesome/css/brands.min.css';
+@import './fontawesome/css/fontawesome.min.css';
+@import './fontawesome/css/solid.min.css';
 
 #app {
 	max-width: 100%;

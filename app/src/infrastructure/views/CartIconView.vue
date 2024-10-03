@@ -30,8 +30,14 @@
 </script>
 
 <template>
-  <div class="cart">
+  <span class="cart">
     <Icon name="cart-shopping" />
-    <div class="cart__counter">{{ counter }}</div>
-  </div>
+    <span class="cart__counter">{{ counter }}</span>
+  </span>
 </template>
+
+<style scoped>
+.cart i {
+  margin-right: 8px;
+}
+</style>

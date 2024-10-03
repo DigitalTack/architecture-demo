@@ -17,7 +17,7 @@ export default buildConfig({
   },
   collections: [Media, Products, Users],
   cors: [
-    'http://localhost:3000'
+    'http://localhost:8000'
   ],
   db: mongooseAdapter({
     url

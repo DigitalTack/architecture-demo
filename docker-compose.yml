@@ -7,7 +7,7 @@ services:
       - ./app:/app
       - /app/node_modules/
     ports:
-      - 3000:3000
+      - 8000:8000
       - 6006:6006
     network_mode: host
 
@@ -19,7 +19,7 @@ services:
       - ./api:/api
       - /app/node_modules/
     ports:
-      - 5000:5000
+      - 3000:3000
 
   db:
     image: mongo:latest

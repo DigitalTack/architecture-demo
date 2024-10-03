@@ -26,10 +26,15 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+	transition: 0.3s;
 }
 
 .button--color-primary {
   background-color: var(--primary-color);
+}
+
+.button--color-primary:hover {
+  background-color: var(--dark-accent-color);
 }
 
 .button--color-dark {

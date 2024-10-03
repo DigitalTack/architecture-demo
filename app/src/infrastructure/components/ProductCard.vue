@@ -22,7 +22,12 @@
 			<CardTitle class="product-card__info__item">{{ product.name }}</CardTitle>
 			<p class="product-card__info__item">{{ product.price }} €</p>
 		</div>
-		<Button :color="ButtonColor.primary" @click="emit('cart:add', product.id)"><Icon name="cart-plus"></Icon>Add to cart</Button>
+		<Button 
+		  :color="ButtonColor.primary"
+			@click="emit('cart:add', product.id)"
+		>
+			<Icon name="cart-plus"></Icon>Add to cart
+	  </Button>
 	</div>
 </template>
 
@@ -30,5 +35,9 @@
 .product-card__info {
 	display: flex;
 	justify-content: space-between;
+}
+
+.product-card button i {
+	margin-right: 8px;
 }
 </style>
