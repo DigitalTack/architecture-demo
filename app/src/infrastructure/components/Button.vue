@@ -29,14 +29,6 @@
 	transition: 0.3s;
 }
 
-.button--color-primary {
-  background-color: var(--primary-color);
-}
-
-.button--color-primary:hover {
-  background-color: var(--dark-accent-color);
-}
-
 .button--color-dark {
   background-color: var(--dark-shades-color);
   color: var(--light-font);

@@ -23,7 +23,7 @@
 			<p class="product-card__info__item">{{ product.price }} €</p>
 		</div>
 		<Button 
-		  :color="ButtonColor.primary"
+		  :color="ButtonColor.dark"
 			@click="emit('cart:add', product.id)"
 		>
 			<Icon name="cart-plus"></Icon>Add to cart

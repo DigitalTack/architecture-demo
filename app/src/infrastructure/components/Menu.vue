@@ -26,7 +26,7 @@
 
 	.menu__item a {
 		color: var(--light-font);
-		background-color: var(--primary-color);
+		background-color: var(--dark-shades-color);
 		padding: 10px;
 		transition: 0.3s;
 	}

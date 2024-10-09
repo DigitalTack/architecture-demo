@@ -1,5 +1,4 @@
 enum ButtonColor {
-	primary = 'primary',
 	dark = 'dark',
 	light = 'light'
 }
