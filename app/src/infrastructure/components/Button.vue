@@ -4,7 +4,7 @@
 	import type { ButtonProps } from '@/infrastructure/types/Button'
 
 	const props = withDefaults(defineProps<ButtonProps>(), {
-		color: ButtonColor.primary
+		color: ButtonColor.light
 	})
 
 	const colorMod = computed(() => {
@@ -21,7 +21,6 @@
 <style scoped>
 .button {
   padding: 15px;
-  color: var(--light-font);
   font-weight: bold;
   border: none;
   border-radius: 10px;

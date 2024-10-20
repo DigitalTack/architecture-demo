@@ -6,7 +6,8 @@
   "scripts": {
     "test": "playwright test"
   },
-  "devDependencies": {
-    "@playwright/test": "^1.40.1"
+  "dependencies": {
+    "@playwright/test": "^1.48.1",
+    "color-contrast-checker": "^2.1.0"
   }
 }
