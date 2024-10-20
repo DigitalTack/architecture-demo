@@ -5,6 +5,7 @@ enum ButtonColor {
 
 export interface ButtonProps {
   color?: ButtonColor
+  ariaLabel?: string
 }
 
 export { ButtonColor }
