@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 	import ProductCard from '@/infrastructure/components/ProductCard.vue'
+  import TextInput from '@/infrastructure/components/TextInput.vue'
 	import MainTitle from '@/infrastructure/components/MainTitle.vue'
 	import Section from '@/infrastructure/components/Section.vue'
 	import { SectionMode } from '@/infrastructure/types/Section'
