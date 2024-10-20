@@ -13,7 +13,7 @@
 </script>
 
 <template>
-	<button class="button" :class="colorMod">
+	<button class="button" :class="colorMod" :aria-label="ariaLabel">
 		<slot />
 	</button>
 </template>

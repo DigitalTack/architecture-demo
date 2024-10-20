@@ -1,4 +1,6 @@
 <script setup lang="ts">
+	import { computed } from 'vue'
+
 	import Button from '@/infrastructure/components/Button.vue'
 	import CardTitle from '@/infrastructure/components/CardTitle.vue'
 	import Icon from '@/infrastructure/components/Icon.vue'
@@ -7,9 +9,12 @@
 	import { ButtonColor } from '@/infrastructure/types/Button'
 	import type { Product } from '@/domain/entities/Product'
 
-	defineProps<{product: Product}>()
+	const props = defineProps<{product: Product}>()
 
 	const emit = defineEmits(['cart:add'])
+  const ariaLabel = computed(() => {
+    return 'Add ' + props.product.name + ' to cart'
+  })
 </script>
 
 <template>
@@ -25,6 +30,7 @@
 		<Button 
 		  :color="ButtonColor.dark"
 			@click="emit('cart:add', product.id)"
+      :ariaLabel="ariaLabel"
 		>
 			<Icon name="cart-plus"></Icon>Add to cart
 	  </Button>

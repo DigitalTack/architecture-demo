@@ -6,7 +6,6 @@ import type { Image as TImage } from '@/domain/entities/Image'
 import { ImageSize } from '@/domain/entities/Image'
 
 describe('An image', () => {
-
   it('has an alternative text', () => {
     const fakeImage: TImage = {
       sizes: {
