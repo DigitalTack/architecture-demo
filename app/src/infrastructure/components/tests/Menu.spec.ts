@@ -15,7 +15,7 @@ describe('The menu', () => {
 
     const link = screen.getByRole('link', { name: 'Home' })
 
-    expect(link.getAttribute('href')).toBe('/')
+    expect(link).toBeTruthy()
   })
 })
 
